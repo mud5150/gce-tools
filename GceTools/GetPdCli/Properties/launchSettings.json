@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GetPdCli": {
+      "commandName": "Project",
+      "commandLineArgs": "8"
+    }
+  }
+}

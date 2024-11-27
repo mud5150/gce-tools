@@ -171,7 +171,8 @@ namespace GceTools
         WriteDebugLine(String.Format("storageIdentifier size: {0}",
           (int)storageIdentifier.IdentifierSize));
 
-        if (storageIdentifier.Type == StorageAPI.STORAGE_IDENTIFIER.STORAGE_IDENTIFIER_TYPE.StorageIdTypeVendorId &&
+        if ((storageIdentifier.Type == StorageAPI.STORAGE_IDENTIFIER.STORAGE_IDENTIFIER_TYPE.StorageIdTypeVendorId ||
+            storageIdentifier.Type == StorageAPI.STORAGE_IDENTIFIER.STORAGE_IDENTIFIER_TYPE.StorageIdTypeScsiNameString) &&
             storageIdentifier.Association == StorageAPI.STORAGE_IDENTIFIER.STORAGE_ASSOCIATION_TYPE.StorageIdAssocDevice)
         {
           IntPtr identifierData =
